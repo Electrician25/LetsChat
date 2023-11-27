@@ -1,5 +1,5 @@
-﻿using LetsChatTogether_Application.Data;
-using LetsChatTogether_Application.Entities;
+﻿using LetsChat.Data;
+using LetsChat.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LetsChat.CrudServices

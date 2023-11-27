@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace LetsChatTogether_Application.Entities
+﻿namespace LetsChat.Entities
 {
 	public class ChatRoom
 	{

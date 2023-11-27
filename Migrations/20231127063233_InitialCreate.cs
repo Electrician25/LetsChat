@@ -28,7 +28,7 @@ namespace LetsChat.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
                     UserId = table.Column<int>(type: "integer", nullable: false)
@@ -39,9 +39,9 @@ namespace LetsChat.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserId);
+                    table.PrimaryKey("PK_User", x => x.UserId);
                     table.ForeignKey(
-                        name: "FK_Users_Rooms_ChatRoomId",
+                        name: "FK_User_Rooms_ChatRoomId",
                         column: x => x.ChatRoomId,
                         principalTable: "Rooms",
                         principalColumn: "ChatRoomId",
@@ -58,7 +58,7 @@ namespace LetsChat.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Users",
+                table: "User",
                 columns: new[] { "UserId", "ChatRoomId", "UserName", "UserPassword" },
                 values: new object[,]
                 {
@@ -69,8 +69,8 @@ namespace LetsChat.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_ChatRoomId",
-                table: "Users",
+                name: "IX_User_ChatRoomId",
+                table: "User",
                 column: "ChatRoomId");
         }
 
@@ -78,7 +78,7 @@ namespace LetsChat.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
 
             migrationBuilder.DropTable(
                 name: "Rooms");

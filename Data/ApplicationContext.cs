@@ -1,7 +1,7 @@
-﻿using LetsChatTogether_Application.Entities;
+﻿using LetsChat.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace LetsChatTogether_Application.Data
+namespace LetsChat.Data
 {
 	public class ApplicationContext : DbContext
 	{
@@ -11,7 +11,6 @@ namespace LetsChatTogether_Application.Data
 		}
 
 		public virtual DbSet<ChatRoom> Rooms => Set<ChatRoom>();
-		public virtual DbSet<User> Users => Set<User>();
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -33,6 +32,7 @@ namespace LetsChatTogether_Application.Data
 					{
 						ChatRoomId = 2,
 						RoomName = "NoPass",
+						RoomPassword = null
 					}
 				});
 

@@ -1,7 +1,7 @@
-﻿using LetsChatTogether_Application.Data;
+﻿using LetsChat.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace LetsChatTogetherApp.Extensions
+namespace LetsChatAppConstext.Extensions
 {
 	public static class WebApplicationBuilderExtensions
 	{

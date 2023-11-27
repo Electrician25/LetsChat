@@ -1,10 +1,9 @@
 Add();
 
 async function Add() {
-    let sendRequest = await sendGetRequest("https://localhost:7211/api/rooms");
+    let sendRequest = await sendGetRequest("https://localhost:7211/api/chatRooms");
     console.log(sendRequest);
     let allChatRooms = sendRequest.chatRooms;
-    console.log(allChatRooms);
 
     for(let i = 0; i < allChatRooms.length; i++)
     {
@@ -15,6 +14,7 @@ async function Add() {
 
 function createChatRoom(chatRoom)
 {
+    console.log(chatRoom);
     let roomElement = document.createElement("a");
     let roomName = "Lobby: " + chatRoom.roomName;
     roomElement.className = "room";
@@ -25,7 +25,6 @@ function createChatRoom(chatRoom)
 } 
 
 function sendGetRequest(uri) {
-    console.log("213");
     const myHeaders = new Headers()
     myHeaders.append('Content-Type', 'application/json')
     const request = new Request(uri, {
@@ -33,7 +32,6 @@ function sendGetRequest(uri) {
         headers: myHeaders
     });
 
-    console.log(request);
     let search_result = fetch(request)
         .then((response) => {
             return response.json();

@@ -1,13 +1,14 @@
-﻿using LetsChatTogether_Application.Entities;
+﻿using LetsChat.CrudServices;
+using LetsChat.Entities;
 
-namespace LetsChatTogetherApp.Extensions
+namespace LetsChat.ServiceCollectionExtensions
 {
 	public static class ServiceCollectionExtensions
 	{
 		public static IServiceCollection AddCategoryCrudServices(this IServiceCollection services)
 		{
-			services.AddTransient<ChatRoom>()
-					.AddTransient<User>();
+			services.AddTransient<ChatRoomCrud>()
+				.AddTransient<User>();
 
 			return services;
 		}

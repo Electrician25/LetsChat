@@ -1,5 +1,5 @@
 ﻿using LetsChat.CrudServices;
-using LetsChatTogether_Application.Entities;
+using LetsChat.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LetsChat.Controller
@@ -16,7 +16,7 @@ namespace LetsChat.Controller
 		}
 
 		[HttpGet]
-		[Route("Rooms")]
+		[Route("allchats")]
 		public ChatRoom[] AllChatRooms()
 		{ 
 			return _chatRoomCrud.GetAllChatRooms();

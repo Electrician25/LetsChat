@@ -1,5 +1,6 @@
 using LetsChat.ActionResult;
-using LetsChatTogetherApp.Extensions;
+using LetsChat.ServiceCollectionExtensions;
+using LetsChatAppConstext.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCategoryCrudServices();
@@ -15,6 +16,8 @@ builder.Services.AddTransient(provider =>
 
 var app = builder.Build();
 
+app.UseRouting();
+
 app.UseHttpsRedirection();
 
 app.UseStatusCodePages();
@@ -26,7 +29,5 @@ app.UseDefaultFiles();
 app.MapControllers();
 
 app.UseStaticFiles();
-
-app.UseRouting();
 
 app.Run();

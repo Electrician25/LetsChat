@@ -14,7 +14,7 @@ namespace LetsChat.Controllers
         }
 
         [HttpGet]
-        [Route("show")]
+        [Route("AllChatRooms")]
         public IActionResult WriteBlogs()
         {
             return _htmlResult(@"./wwwroot/html/ChatRoomsPage.html");
