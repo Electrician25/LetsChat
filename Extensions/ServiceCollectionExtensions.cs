@@ -1,5 +1,4 @@
 ﻿using LetsChat.CrudServices;
-using LetsChat.Entities;
 
 namespace LetsChat.ServiceCollectionExtensions
 {
@@ -7,8 +6,7 @@ namespace LetsChat.ServiceCollectionExtensions
 	{
 		public static IServiceCollection AddCategoryCrudServices(this IServiceCollection services)
 		{
-			services.AddTransient<ChatRoomCrud>()
-				.AddTransient<User>();
+			services.AddTransient<ChatRoomCrud>();
 
 			return services;
 		}

@@ -19,5 +19,19 @@ namespace LetsChat.Controllers
         {
             return _htmlResult(@"./wwwroot/html/ChatRoomsPage.html");
         }
-    }
+
+		[HttpGet]
+		[Route("Chat")]
+		public IActionResult Chat()
+		{
+			return _htmlResult(@"./wwwroot/html/Index.html");
+		}
+
+		[HttpGet]
+		[Route("ChatRoom")]
+		public IActionResult ChatRoom()
+		{
+			return _htmlResult(@"./wwwroot/html/ChatRoom.html");
+		}
+	}
 }

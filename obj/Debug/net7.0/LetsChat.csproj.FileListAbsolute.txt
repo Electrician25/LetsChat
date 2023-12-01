@@ -36,3 +36,11 @@ D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.De
 D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Mono.TextTemplating.dll
 D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\System.CodeDom.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.Azure.NotificationHubs.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\MyProject\LetsChat\LetsChat\bin\Debug\net7.0\libman.json

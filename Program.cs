@@ -1,8 +1,10 @@
 using LetsChat.ActionResult;
+using LetsChat.ChatHub;
 using LetsChat.ServiceCollectionExtensions;
 using LetsChatAppConstext.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSignalR();
 builder.Services.AddCategoryCrudServices();
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
@@ -16,7 +18,7 @@ builder.Services.AddTransient(provider =>
 
 var app = builder.Build();
 
-app.UseRouting();
+app.MapHub<ChatHub>("/chatHub");
 
 app.UseHttpsRedirection();
 
@@ -29,5 +31,7 @@ app.UseDefaultFiles();
 app.MapControllers();
 
 app.UseStaticFiles();
+
+app.UseRouting();
 
 app.Run();
